@@ -1,8 +1,15 @@
+import { ThemeProvider } from 'styled-components';
+import Sidebar from './components/Sidebar';
 import GlobalStyle from './styles/global';
+import styles from './styles';
 
 function App() {
   return (
-    <GlobalStyle />
+    <ThemeProvider theme={styles}>
+      <Sidebar />
+      <GlobalStyle />
+    </ThemeProvider>
+
   );
 }
 
